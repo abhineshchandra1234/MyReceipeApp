@@ -20,6 +20,10 @@
 - Safe args
 - Grid
 ---
+# MVVM architecture
+
+## View
+### Navigation 
 ## 📝 License
 ```
 Copyright 2024 Abhinesh Chandra
