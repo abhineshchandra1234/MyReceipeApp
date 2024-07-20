@@ -24,6 +24,15 @@
 
 ## View
 ### Navigation 
+- At source, we have a single activity `MainActivity.kt`
+- `MainActivity.kt` will host and shows all our app screens
+- `MainActivity.kt` contains composable `ReceipeApp`
+- `ReceipeApp` is acting as **NavHostFragment** means it will host the navigation and where the desired screens swapping will take place
+- `ReceipeApp` contains the function `NavHost` in which the whole **Navigation Graph** is defined where `ReceipeApp` is its host
+- `MainActivity.kt` is passing **NavController** to `ReceipeApp` or `NavHost` to remember current position in navigation graph.
+- **NavController** is also helping to swap the screens as we move through the navigation graph
+
+---
 ## 📝 License
 ```
 Copyright 2024 Abhinesh Chandra
