@@ -41,6 +41,10 @@
 - `CategoryScreen` uses the grid to display items and will pass the callback `navigateToDetail` to `CategoryItem`
 - `CategoryItem` contains a custom layout for each item. When the user clicks on the item, the `navigateToDetail` callback is called, with the category passed as a parameter
 - `navigateToDetail` is the anonymous function which has input parameter of category and return type as Unit
+- category is an object fetched from the internet which contains all the dish details
+- `CategoryItem` is just displaying the thumbnail and dish name to the users
+- `navigateToDetail` will reciprocate to its implementation in `NavHost` by `RecipeScreen` using lambda expression
+- `navigateToDetail` lambda implementation contains logic to navigate to `DetailScreen` using **NavController** 
 ---
 ## 📝 License
 ```
