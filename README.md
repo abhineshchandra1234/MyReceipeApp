@@ -1,9 +1,9 @@
 # Receipe App
-- Created a receipe app using jetpack compose and MVVM
+- Created a recipe app using Jetpack compose and MVVM
 ---
 ## Features
-- there will show a list of different dishes
-- we can see a detailed receipe by clicking on them
+- there will be a list of different dishes
+- we can see a detailed recipe by clicking on them
 ---
 ## Screenshots
 <p align="center">
@@ -21,22 +21,26 @@
 - Grid
 ---
 # MVVM architecture
-
+- we will try to cover the MVVM architecture of this project at a high level, covering all important features
 ## View
 ### Navigation 
 - At the source, we have a single activity `MainActivity.kt`
 - we are following single-screen architecture, where we have one screen MainActivity, it will swap or show all screens or composable
 - `MainActivity.kt` will host and show all our app screens
 - `MainActivity.kt` contains composable `ReceipeApp`
-- `ReceipeApp` is acting as **NavHostFragment** means it will host the navigation and where the desired screen swapping will take place
+- `ReceipeApp` is acting as **NavHostFragment**, which means it will host the navigation and where the desired screen swapping will take place
 - `ReceipeApp` contains the function `NavHost` in which the whole **Navigation Graph** is defined where `ReceipeApp` is its host
 - `MainActivity.kt` is passing **NavController** to `ReceipeApp` or `NavHost` to remember the current position in the navigation graph.
 - **NavController** is also helping to swap the screens as we move through the navigation graph
-- **Navigation Flow or Callback**
+- **Navigation Flow or Callbacks**
 - At first, we have `MainActivity.kt` which displays the `ReceipeApp` screen
 - When we reach the `ReceipeApp` screen, its `NavHost` is triggered
 - `NavHost` has a start destination of `RecipeScreen`, which will show a list of recipes
 - In `RecipeScreen` lambda function or callback `navigateToDetail` is passed
+- `RecipeScreen` passes this callback `navigateToDetail` to `CategoryScreen` after a successful network call
+- `CategoryScreen` uses the grid to display items and will pass the callback `navigateToDetail` to `CategoryItem`
+- `CategoryItem` contains a custom layout for each item. When the user clicks on the item, the `navigateToDetail` callback is called, with the category passed as a parameter
+- `navigateToDetail` is the anonymous function which has input parameter of category and return type as Unit
 ---
 ## 📝 License
 ```
