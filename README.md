@@ -24,14 +24,19 @@
 
 ## View
 ### Navigation 
-- At source, we have a single activity `MainActivity.kt`
-- `MainActivity.kt` will host and shows all our app screens
+- At the source, we have a single activity `MainActivity.kt`
+- we are following single-screen architecture, where we have one screen MainActivity, it will swap or show all screens or composable
+- `MainActivity.kt` will host and show all our app screens
 - `MainActivity.kt` contains composable `ReceipeApp`
-- `ReceipeApp` is acting as **NavHostFragment** means it will host the navigation and where the desired screens swapping will take place
+- `ReceipeApp` is acting as **NavHostFragment** means it will host the navigation and where the desired screen swapping will take place
 - `ReceipeApp` contains the function `NavHost` in which the whole **Navigation Graph** is defined where `ReceipeApp` is its host
-- `MainActivity.kt` is passing **NavController** to `ReceipeApp` or `NavHost` to remember current position in navigation graph.
+- `MainActivity.kt` is passing **NavController** to `ReceipeApp` or `NavHost` to remember the current position in the navigation graph.
 - **NavController** is also helping to swap the screens as we move through the navigation graph
-
+- **Navigation Flow or Callback**
+- At first, we have `MainActivity.kt` which displays the `ReceipeApp` screen
+- When we reach the `ReceipeApp` screen, its `NavHost` is triggered
+- `NavHost` has a start destination of `RecipeScreen`, which will show a list of recipes
+- In `RecipeScreen` lambda function or callback `navigateToDetail` is passed
 ---
 ## 📝 License
 ```
