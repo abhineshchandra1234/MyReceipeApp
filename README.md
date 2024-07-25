@@ -48,8 +48,8 @@
 - **Serialization**
 - `CategoryItem` passes Category parcelable object to lambda expression `navigateToDetail`
 - We need to convert the data class to parcelable object to pass between activities
-- `navigateToDetail` is saving this data in the current back stack entry using a bundle where the key is `cat`
-- In `NavHost` before navigating to `CategoryDetailScreen`, `NavController` is used to fetch Category parcelable object from previous back stack entry
+- `navigateToDetail` is using `NavController` to save this data in the current back stack entry using a bundle where the key is `cat`
+- In `NavHost` before navigating to `CategoryDetailScreen`, `NavController` is used to fetch `Category` parcelable object from previous back stack entry
 - Later this Category parcelable object is passed to `CategoryDetailScreen`, which uses its properties like - `strCategoryThumb` and `strCategoryDescription` to display the image and description of the recipe
 ---
 ## 📝 License
