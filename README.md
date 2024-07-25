@@ -44,7 +44,12 @@
 - category is an object fetched from the internet which contains all the dish details
 - `CategoryItem` is just displaying the thumbnail and dish name to the users
 - `navigateToDetail` will reciprocate to its implementation in `NavHost` by `RecipeScreen` using lambda expression
-- `navigateToDetail` lambda implementation contains logic to navigate to `DetailScreen` using **NavController** 
+- `navigateToDetail` lambda implementation contains logic to navigate to `DetailScreen` using **NavController**
+- **Serialization**
+- `CategoryItem` passes Category parcelable object to lambda expression `navigateToDetail`
+- We need to convert the data class to parcelable object to pass between activities
+- `navigateToDetail` is saving this data in the current back stack entry using a bundle where the key is `cat`
+- 
 ---
 ## 📝 License
 ```
