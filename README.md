@@ -52,6 +52,14 @@
 - In `NavHost` before navigating to `CategoryDetailScreen`, `NavController` is used to fetch `Category` parcelable object from previous back stack entry
 - Later this Category parcelable object is passed to `CategoryDetailScreen`, which uses its properties like - `strCategoryThumb` and `strCategoryDescription` to display the image and description of the recipe
 ---
+## ViewModel
+- we have `MainViewModel` which holds all the data related to the UI
+- `MainViewModel` is initialized by the `NavHost` `ReceipeApp`
+- when `MainViewModel` is initialized it fetches data from the internet and stores it in the object `RecipeState`
+- Error is stored in the `RecipeState`, if there was some issue fetching data from the internet
+- `ReceipeApp` fetches this read only data using immutable object `categoriesState` and stores it in the variable `viewstate`
+- Later `ReceipeApp` passes this `viewstate` object to `RecipeScreen` to display list of receips, which later passes it to `CategoryDetailScreen` to show details of the recipe.
+---
 ## 📝 License
 ```
 Copyright 2024 Abhinesh Chandra
