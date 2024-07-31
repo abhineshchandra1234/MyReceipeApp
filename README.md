@@ -57,8 +57,11 @@
 - `MainViewModel` is initialized by the `NavHost` `ReceipeApp`
 - when `MainViewModel` is initialized it fetches data from the internet and stores it in the object `RecipeState`
 - Error is stored in the `RecipeState`, if there was some issue fetching data from the internet
-- `ReceipeApp` fetches this read only data using immutable object `categoriesState` and stores it in the variable `viewstate`
-- Later `ReceipeApp` passes this `viewstate` object to `RecipeScreen` to display list of receips, which later passes it to `CategoryDetailScreen` to show details of the recipe.
+- `RecipeState` is a data class which has three attributes ie loading (boolean), list (category list) and error (string)
+- when data is being fetched `loading -> true, list -> empty, error -> null`, data is fetched successfully `loading -> false, list -> categories list, error -> null`
+- when error occurs fetching data `loading -> false, list -> empty, error -> error message`
+- `ReceipeApp` fetches this read-only data using the immutable object `categoriesState` and stores it in the variable `viewstate`
+- Later `ReceipeApp` passes this `viewstate` object to `RecipeScreen` to display the list of recipes, which later passes it to `CategoryDetailScreen` to show details of the recipe.
 ---
 ## 📝 License
 ```
