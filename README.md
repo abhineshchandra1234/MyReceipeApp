@@ -76,6 +76,8 @@
 - `CategoriesResponse` is used to receive data from the internet
 - `CategoriesResponse` is the data class, whose input type is the list of category
 - we are fetching a list of category objects from the server
+- Inside the `Category` data class we can define the attributes which we want to fetch, there is no need to describe all the attributes
+- we can also define some extra attributes not present in the server, retrofit will handle it without throwing any error
 ---
 ## 📝 License
 ```
