@@ -82,7 +82,9 @@
 - `getCategories` suspend function will run on the main thread, it will pause when fetching data from the server without affecting the main thread, fetching data will happen on a separate thread apart from the main thread
 - once data is fetched `getCategories` suspend function will resume again automatically, transferring control back to the main thread and providing data to viewmodel `MainViewModel`
 - Earlier callback method was used, which was called on the main thread, data fetching used to happen on a separate thread, once data was fetched, control was transferred to the main thread again.
-- Coroutines are based on this same callback approach     
+- Coroutines are based on this same callback approach
+- By default, all coroutines run on the main thread, if you want some coroutines tasks to run on more suitable threads like- Dispatchers.IO, Dispatchers.Default, you can use dispatchers
+- The IO thread is optimized for disk and network IO off the main thread and the Default thread is optimized for CPU-intensive work off the main thread.   
 ---
 ## 📝 License
 ```
