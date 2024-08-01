@@ -69,7 +69,14 @@
 - This interface is responsible for fetching data from the internet
 - we have created a retrofit instance named `retrofit` using the base URL of mealdb
 - we have then created a service instance named `receipeService` using this `retrofit` instance
-- 
+- Inside the `ApiService` we have defined the suspend function `getCategories`
+- `getCategories` uses @GET annotation, to customize the base URL to fetch required data
+- @GET annotation can also be used to query or filter the data
+- `getCategories` has a return type of `CategoriesResponse`
+- `CategoriesResponse` is used to receive data from the internet
+- `CategoriesResponse` is the data class, whose input type is the list of category
+- we are fetching a list of category objects from the server
+---
 ## 📝 License
 ```
 Copyright 2024 Abhinesh Chandra
