@@ -63,6 +63,13 @@
 - `ReceipeApp` fetches this read-only data using the immutable object `categoriesState` and stores it in the variable `viewstate`
 - Later `ReceipeApp` passes this `viewstate` object to `RecipeScreen` to display the list of recipes, which later passes it to `CategoryDetailScreen` to show details of the recipe.
 ---
+## Model
+- we do not have repository-level abstraction, viewmodel is directly interacting with the model layer ie service class
+- we have created a service interface named `ApiService`
+- This interface is responsible for fetching data from the internet
+- we have created a retrofit instance named `retrofit` using the base URL of mealdb
+- we have then created a service instance named `receipeService` using this `retrofit` instance
+- 
 ## 📝 License
 ```
 Copyright 2024 Abhinesh Chandra
