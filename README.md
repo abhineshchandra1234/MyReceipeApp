@@ -78,6 +78,9 @@
 - we are fetching a list of category objects from the server
 - Inside the `Category` data class we can define the attributes which we want to fetch, there is no need to describe all the attributes
 - we can also define some extra attributes not present in the server, retrofit will handle it without throwing any error
+- `getCategories` suspend function is called inside the coroutine launched by the viewmodel `MainViewModel`
+- `getCategories` suspend function will run on the main thread, it will pause when fetching data from the server without affecting the main thread
+- once data is fetched `getCategories` suspend function will resume gain automatically and provide data to viewmodel `MainViewModel`
 ---
 ## 📝 License
 ```
