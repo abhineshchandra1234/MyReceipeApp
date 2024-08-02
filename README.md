@@ -37,6 +37,11 @@
 - `CategoryItem` uses a `Column` which contains `Image` and `Text`
 - `Image` uses the `rememberAsyncImagePainter` method of the `Coil` library to fetch images asynchronously by just using the URL
 - `Text` will display the recipe name
+- Similarly `CategoryDetailScreen` works, it just shows the details of the recipe
+- `CategoryDetailScreen` consist of a column which has three components `Text`, `Image` and `Text`
+- `Text` component displays the recipe heading above the image and the recipe description below the image.
+- `Text` component displaying the description also provides vertical scroll and remembering its position
+- `Image` component displays the recipe image using same `rememberAsyncImagePainter` method of the `Coil` library
 ### Navigation 
 - At the source, we have a single activity `MainActivity.kt`
 - we are following single-screen architecture, where we have one screen MainActivity, it will swap or show all screens or composable
