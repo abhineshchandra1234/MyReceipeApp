@@ -32,7 +32,11 @@
 - Box layout is showing `CircularProgressIndicator` when data is loading
 - It shows `error text` when there is an error fetching data
 - It passes a list of categories to `CategoryScreen` when data is fetched successfully
-- 
+- `CategoryScreen` uses LazyVerticalGrid to display recipes or categories in the custom layout
+- LazyVerticalGrid loops through recipes and passes them to the custom layout `CategoryItem`
+- `CategoryItem` uses a `Column` which contains `Image` and `Text`
+- `Image` uses the `rememberAsyncImagePainter` method of the `Coil` library to fetch images asynchronously by just using the URL
+- `Text` will display the recipe name
 ### Navigation 
 - At the source, we have a single activity `MainActivity.kt`
 - we are following single-screen architecture, where we have one screen MainActivity, it will swap or show all screens or composable
