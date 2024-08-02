@@ -23,6 +23,10 @@
 # MVVM architecture
 - we will try to cover the MVVM architecture of this project at a high level, covering all important features
 ## View
+### UI
+- At first, we have `MainActivity` as the base
+- `MainActivity` is displaying the `ReceipeApp` screen using scaffold
+- `ReceipeApp` screen is acting as a NavHost for `RecipeScreen` and `CategoryDetailScreen`
 ### Navigation 
 - At the source, we have a single activity `MainActivity.kt`
 - we are following single-screen architecture, where we have one screen MainActivity, it will swap or show all screens or composable
