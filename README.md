@@ -27,6 +27,12 @@
 - At first, we have `MainActivity` as the base
 - `MainActivity` is displaying the `ReceipeApp` screen using scaffold
 - `ReceipeApp` screen is acting as a NavHost for `RecipeScreen` and `CategoryDetailScreen`
+- `ReceipeApp` screen will show a list of recipes
+- `ReceipeApp` screen has a base of box layout.
+- Box layout is showing `CircularProgressIndicator` when data is loading
+- It shows `error text` when there is an error fetching data
+- It passes a list of categories to `CategoryScreen` when data is fetched successfully
+- 
 ### Navigation 
 - At the source, we have a single activity `MainActivity.kt`
 - we are following single-screen architecture, where we have one screen MainActivity, it will swap or show all screens or composable
