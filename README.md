@@ -29,9 +29,9 @@
 - `ReceipeApp` screen is acting as a NavHost for `RecipeScreen` and `CategoryDetailScreen`
 - `ReceipeApp` screen will show a list of recipes
 - `ReceipeApp` screen has a base of box layout.
-- Box layout is showing `CircularProgressIndicator` when data is loading
-- It shows `error text` when there is an error fetching data
-- It passes a list of categories to `CategoryScreen` when data is fetched successfully
+- Box layout is showing `CircularProgressIndicator`, when data is loading
+- It shows `error text`, when there is an error fetching data
+- It passes a list of categories to `CategoryScreen`, when data is fetched successfully
 - `CategoryScreen` uses LazyVerticalGrid to display recipes or categories in the custom layout
 - LazyVerticalGrid loops through recipes and passes them to the custom layout `CategoryItem`
 - `CategoryItem` uses a `Column` which contains `Image` and `Text`
