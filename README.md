@@ -22,6 +22,9 @@
 ---
 # MVVM architecture
 - we will try to cover the MVVM architecture of this project at a high level, covering all important features
+<img src = "https://raw.githubusercontent.com/abhineshchandra1234/MyReceipeApp/master/app/src/main/res/drawable/screenshots/Project%20Structure.png" height=500px/>
+
+
 ## View
 ### UI
 - At first, we have `MainActivity` as the base
