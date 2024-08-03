@@ -2,6 +2,7 @@ package com.example.myreceipeapp
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
@@ -39,7 +40,17 @@ fun RecipeScreen(
             }
 
             viewstate.error != null -> {
-                Text(text = "ERROR OCCURRED")
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(8.dp),
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.CenterHorizontally
+
+                ) {
+                    Text(text = "ERROR OCCURRED ${viewstate.error}")
+                }
+
             }
 
             else -> {
